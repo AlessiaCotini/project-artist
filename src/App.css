@@ -127,10 +127,10 @@ h1, h2, .city-name {
 }
 
 .custom-dropdown .nav-link {
-  color: #daed08bd !important; 
+  color: #0f0f0fdb !important; 
   font-weight: bold;
  font-family: 'Arial', sans-serif;
-  border: 1px solid  #daed08bd ;
+  border: 1px solid  #1919188f ;
   border-radius: 8px;
   padding: 8px 15px !important;
 }
@@ -147,7 +147,7 @@ h1, h2, .city-name {
 }
 
 .custom-dropdown .dropdown-item:hover {
-  background-color:  #daed08bd ;
+  background-color:  #14141481 ;
   color: #fff;
 }
 /* specific day */ 

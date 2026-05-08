@@ -15,6 +15,8 @@ import tramonto from "../assets/tramonto.jpg";
 import gattino from "../assets/gattino.jpg";
 import venere from "../assets/venere.jpg";
 import bacio from "../assets/bacio.jpg";
+import ilbacio from "../assets/ilbacio.jpg";
+
 import { Link } from "react-router-dom";
 const NavbarMeteo = ({ userGender, userName, onSearch, onChangeBg }) => {
   const [city, setCity] = useState("");
@@ -30,7 +32,7 @@ const NavbarMeteo = ({ userGender, userName, onSearch, onChangeBg }) => {
   return (
     <Navbar expand="lg" className="glass-navbar sticky-top text-black">
       <Container>
-        <Link to="/home" className="text-warning fw-bold me-4 navbar-brand">
+        <Link to="/home" className="fw-bold me-4 navbar-brand">
           IL TUO METEO
         </Link>
 
@@ -69,10 +71,13 @@ const NavbarMeteo = ({ userGender, userName, onSearch, onChangeBg }) => {
               Il bacio
             </NavDropdown.Item>
             <NavDropdown.Item onClick={() => onChangeBg(orologio)}>
-              Orologi
+              La peristenza della memoria
             </NavDropdown.Item>
             <NavDropdown.Item onClick={() => onChangeBg(tramonto)}>
-              Tramonto
+              Impressione
+            </NavDropdown.Item>
+            <NavDropdown.Item onClick={() => onChangeBg(ilbacio)}>
+              Bacio
             </NavDropdown.Item>
             <NavDropdown.Item onClick={() => onChangeBg(gattino)}>
               Il gatto sull'oceano

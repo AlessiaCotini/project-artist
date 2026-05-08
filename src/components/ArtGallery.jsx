@@ -4,6 +4,7 @@ import tramonto from "../assets/tramonto.jpg";
 import gattino from "../assets/gattino.jpg";
 import venere from "../assets/venere.jpg";
 import bacio from "../assets/bacio.jpg";
+import ilbacio from "../assets/ilbacio.jpg";
 
 const ArtGallery = () => {
   const quadriInfo = [
@@ -37,6 +38,12 @@ const ArtGallery = () => {
       artist: "Contemporaneo",
       desc: "Un tocco di fantasia e surrealismo moderno per rilassare la vista.",
     },
+    {
+      img: ilbacio,
+      title: "Il Bacio",
+      artist: "Gustav Klimt",
+      desc: "Un capolavoro dorato dove due amanti si fondono in un abbraccio eterno tra geometrie simboliche e preziosi mosaici.",
+    },
   ];
 
   return (
@@ -45,18 +52,18 @@ const ArtGallery = () => {
       <Row className="g-4">
         {quadriInfo.map((art, index) => (
           <Col key={index} md={6} lg={4}>
-            <Card className="glass-card h-100 border-0 text-info">
+            <Card className="glass-card h-100 border-0 text-dark">
               <Card.Img
                 variant="top"
                 src={art.img}
                 style={{ height: "200px", objectFit: "cover" }}
               />
-              <Card.Body>
+              <Card.Body className="bg-gradient">
                 <Card.Title className="fw-bold">{art.title}</Card.Title>
                 <Card.Subtitle className="mb-2 text-secondary">
                   {art.artist}
                 </Card.Subtitle>
-                <Card.Text className="text-info-50 small">{art.desc}</Card.Text>
+                <Card.Text className="text-dark-50 small">{art.desc}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
