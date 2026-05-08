@@ -1,184 +1,233 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
+/* registrazione */
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+.registration-container {
+background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
+              url('./assets/i\ girasoli.jpg');;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Urbanist', sans-serif;
+ 
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);        
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
+.glass-card input, .glass-card select {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
 }
 
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
+.glass-card input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.glass-card select option {
+  background-color: light; 
 }
 
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
+/* Pagina principale */
 
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
+ .dashboard-wrapper {
+  /* url('./assets/van\ gogh\ ciliegio.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Urbanist', sans-serif;
+}
+.card.main-weather-card {
+  background: rgba(15, 23, 42, 0.25); 
+  backdrop-filter: blur(25px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+   text-align: center;
 }
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+.card.detail-card {
+  background: rgba(15, 23, 42, 0.4); 
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
+.card.detail-card:hover {
+  transform: translateY(-5px); 
+  background: rgba(15, 23, 42, 0.6);
+}
+h1, h2, .city-name {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   text-align: center;
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+.temp-display {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #deff9a;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
+/* navbar e footer */
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px) saturate(120%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 0;
 }
+
+.glass-navbar .navbar-brand, 
+.glass-navbar .nav-link,
+.glass-navbar span {
+  color: #ffffff !important;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  border-radius: 30px;
+  padding-left: 20px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar-profile-wrapper img {
+  width: 40px !important; 
+  height: 40px !important;
+  border: 2px solid rgba(255, 255, 255, 0.8); 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.navbar-profile-wrapper img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.custom-dropdown .nav-link {
+  color: #daed08bd !important; 
+  font-weight: bold;
+ font-family: 'Arial', sans-serif;
+  border: 1px solid  #daed08bd ;
+  border-radius: 8px;
+  padding: 8px 15px !important;
+}
+
+.custom-dropdown .dropdown-menu {
+  background-color: #2222223f;
+  border: none;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.515);
+}
+
+.custom-dropdown .dropdown-item {
+  color: white;
+  transition: background 0.3s;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color:  #daed08bd ;
+  color: #fff;
+}
+/* specific day */ 
+.weather-modal .modal-content {
+  background: rgba(30, 30, 30, 0.263) !important; 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.weather-modal .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding: 1.5rem 2rem;
+}
+
+.weather-modal .modal-title {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(to right, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.weather-modal .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.weather-modal .btn-close:hover {
+  opacity: 1;
+}
+
+.weather-modal .display-3 {
+  font-weight: 800;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.weather-modal .img-fluid {
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.weather-modal hr {
+  opacity: 0.1;
+  background-color: white;
+}
+
+.weather-modal .text-white-50 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+
+.weather-modal .fw-bold {
+  font-size: 1.1rem;
+}
+
+.weather-modal .modal-footer {
+  padding: 1.5rem;
+}
+
+.weather-modal .btn-outline-light {
+  border-radius: 12px;
+  padding: 8px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.weather-modal .btn-outline-light:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);}
