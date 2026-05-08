@@ -7,6 +7,7 @@ import NavbarMeteo from "./components/NavbarMeteo";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FooterMeteo from "./components/FooterMeteo";
 import ciliegio from "./assets/ciliegio.jpg";
+import ArtGallery from "./components/ArtGallery";
 const key = "d62b8a1863ddfd71fa9ead5f9ab6840d";
 function App() {
   const [userData, setUserData] = useState(null);
@@ -81,6 +82,37 @@ function App() {
                   error={error}
                   className="flex-grow-1"
                 />
+                <FooterMeteo />
+              </div>
+            ) : (
+              <Navigate to="/" />
+            )
+          }
+        />
+        <Route
+          path="/galleria"
+          element={
+            userData ? (
+              <div
+                className="dashboard-wrapper d-flex flex-column"
+                style={{
+                  backgroundImage: `url(${bgImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundAttachment: "fixed",
+                  minHeight: "100vh",
+                  transition: "background-image 0.5s ease-in-out",
+                }}
+              >
+                <NavbarMeteo
+                  onSearch={fetchWeather}
+                  userName={userData.name}
+                  userGender={userData.gender}
+                  onChangeBg={changeBackground}
+                />
+                <div className="flex-grow-1">
+                  <ArtGallery />
+                </div>
                 <FooterMeteo />
               </div>
             ) : (

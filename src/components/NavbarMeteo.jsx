@@ -15,7 +15,7 @@ import tramonto from "../assets/tramonto.jpg";
 import gattino from "../assets/gattino.jpg";
 import venere from "../assets/venere.jpg";
 import bacio from "../assets/bacio.jpg";
-
+import { Link } from "react-router-dom";
 const NavbarMeteo = ({ userGender, userName, onSearch, onChangeBg }) => {
   const [city, setCity] = useState("");
 
@@ -30,9 +30,9 @@ const NavbarMeteo = ({ userGender, userName, onSearch, onChangeBg }) => {
   return (
     <Navbar expand="lg" className="glass-navbar sticky-top text-black">
       <Container>
-        <Navbar.Brand href="#" className="text-warning fw-bold me-4">
+        <Link to="/home" className="text-warning fw-bold me-4 navbar-brand">
           IL TUO METEO
-        </Navbar.Brand>
+        </Link>
 
         <Navbar.Toggle aria-controls="weather-nav" className="border-white" />
 
@@ -53,7 +53,9 @@ const NavbarMeteo = ({ userGender, userName, onSearch, onChangeBg }) => {
               Cerca
             </Button>
           </Form>
-
+          <Link to="/galleria" className="nav-link text-white me-3">
+            Per saperne di più
+          </Link>
           <NavDropdown
             title="Scegli il tuo quadro"
             id="bg-dropdown"
