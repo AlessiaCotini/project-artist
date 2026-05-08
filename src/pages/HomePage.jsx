@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card, Spinner } from "react-bootstrap";
-import SpecificDay from "../components/SpecificDay"; // Assicurati che il percorso sia corretto
+import SpecificDay from "../components/SpecificDay";
 import { useState } from "react";
 import "../App.css";
 const HomePage = ({ data, loading, error }) => {
@@ -39,7 +39,7 @@ const HomePage = ({ data, loading, error }) => {
 
   return (
     <div className="home-content">
-      <Container className="py-4">
+      <Container fluid className="py-4">
         <Row className="justify-content-center">
           <Col md={10} lg={8}>
             <Card className="main-weather-card text-center p-5 mb-4 mt-5">

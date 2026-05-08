@@ -1,5 +1,4 @@
 /* registrazione */
-
 .registration-container {
 background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
               url('./assets/i\ girasoli.jpg');;
@@ -35,7 +34,6 @@ background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
 }
 
 /* Pagina principale */
-
  .dashboard-wrapper {
   /* url('./assets/van\ gogh\ ciliegio.jpg'); */
   background-size: cover;
